@@ -1,0 +1,39 @@
+{
+    "name": "roui/model-file-manager",
+    "description": "A Laravel package to handle file storage on model level",
+    "keywords": [
+        "laravel",
+        "file",
+        "storage",
+        "upload"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Roui",
+            "email": "mamalirooy@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "intervention/image": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Roui\\ModelFileManager\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Roui\\ModelFileManager\\FileStorageServiceProvider",
+                "Intervention\\Image\\ImageServiceProvider"
+            ],
+            "aliases": {
+                "Image": "Intervention\\Image\\Facades\\Image"
+            }
+        }
+    },
+    "minimum-stability": "stable"
+}
